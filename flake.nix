@@ -15,13 +15,12 @@
 
     outputs = { self, nixpkgs, ... }@inputs:
     let
-        lib = nixpkgs.lib;
         system = "x86_64-linux";
         pkgs = nixpkgs.legacyPackages.${system};
         pkgs-unstable = inputs.pkgs-unstable.legacyPackages.${system};
     in
     {
-        nixosConfigurations.default = lib.nixosSystem {
+        nixosConfigurations.default = nixpkgs.lib.nixosSystem {
             specialArgs = { inherit inputs; inherit pkgs-unstable; };
             inherit system;
             modules = [
