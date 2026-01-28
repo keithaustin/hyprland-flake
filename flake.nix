@@ -13,7 +13,7 @@
         };
     };
 
-    outputs = { self, ... }@inputs:
+    outputs = { self, nixpkgs, ... }@inputs:
     let
         lib = nixpkgs.lib;
         system = "x86_64-linux";
