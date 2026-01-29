@@ -8,8 +8,8 @@
 
     home-manager = {
         extraSpecialArgs = { inherit inputs; };
-        users.keith = {      
-            imports = [ ./home.nix ];
+        users = {      
+            "keith" = import ./home.nix;
         };
     };
 
