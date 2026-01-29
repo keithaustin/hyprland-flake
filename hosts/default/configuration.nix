@@ -11,6 +11,8 @@
     # Boot
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
+    boot.extraModulePackages = [pkgs.linuxFirmware ];
+    boot.kernelModules = [ "amdgpu" ];
 
     # Networking
     networking.hostName = "keith-desktop-nix";
