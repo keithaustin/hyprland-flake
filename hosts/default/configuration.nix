@@ -6,11 +6,6 @@
         inputs.home-manager.nixosModules.default
     ];
 
-    home-manager = {
-        extraSpecialArgs = { inherit inputs; };
-        users.keith = import ./home.nix;
-    };
-
     programs.hyprland.enable = true;
     programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
 }
