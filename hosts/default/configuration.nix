@@ -44,6 +44,7 @@
     # Required services for hyprland
     security.polkit.enable = true;
     services.dbus.enable = true;
+    services.seatd.enable = true;
 
     # OpenGL / EGL setup
     hardware.graphics = {
@@ -72,6 +73,7 @@
             "wheel"
             "video"
             "input"
+            "seat"
         ];
         packages = with pkgs; [];
     };
