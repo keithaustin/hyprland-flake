@@ -38,5 +38,19 @@
                 }
             ];
         };
+        nixosConfigurations.vbox = nixpkgs.lib.nixosSystem {
+            inherit system;
+
+            modules = [
+                ./hosts/vbox/configuration.nix
+
+                home-manager.nixosModules.home-manager
+                {
+                    home-manager.useGlobalPkgs = true;
+                    home-manager.useUserPackages = true;
+                    home-manager.users.keith = import ./hosts/vbox/home.nix;
+                }
+            ]
+        };
     };
 }
