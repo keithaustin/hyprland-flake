@@ -38,11 +38,9 @@
 
     services.xserver.videoDrivers = [ "amdgpu" ];
 
-    services.dbus.enable = true;
-
     # Required services for hyprland
-    services.logind.enable = true;
     services.polkit.enable = true;
+    services.dbus.enable = true;
 
     # OpenGL / EGL setup
     hardware.opengl = {
