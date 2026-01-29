@@ -33,7 +33,7 @@
                 {
                     home-manager.useGlobalPkgs = true;
                     home-manager.useUserPackages = true;
-                    home-manager.users.keith = import ./home.nix;
+                    home-manager.users.keith = import ./hosts/default/home.nix;
                 }
             ];
         };
