@@ -6,6 +6,10 @@
         pkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
         hyprland.url = "github:hyprwm/Hyprland";
+        hyprland-plugins = {
+            url = "github:hyprwm/hyprland-plugins";
+            inputs.hyprland.follows = "hyprland";
+        };
 
         home-manager = {
             url = "github:nix-community/home-manager/release-24.05";
