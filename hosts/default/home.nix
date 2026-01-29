@@ -69,6 +69,10 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  # Enable other programs
+  programs.git.enable = true;
+  programs.bash.enable = true;
+
   # Allow Home Manager to manage Hyprland
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {

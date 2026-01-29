@@ -17,18 +17,19 @@
         };
     };
 
-    outputs = { self, nixpkgs, home-manager, ... }@inputs:
+    outputs = { self, nixpkgs, home-manager, hyprland, ... }@inputs:
     let
         system = "x86_64-linux";
-        pkgs = nixpkgs.legacyPackages.${system};
-        pkgs-unstable = inputs.pkgs-unstable.legacyPackages.${system};
     in
     {
         nixosConfigurations.default = nixpkgs.lib.nixosSystem {
-            specialArgs = { inherit inputs; inherit pkgs-unstable; };
             inherit system;
+
             modules = [
                 ./hosts/default/configuration.nix
+
+                hyprland.nixosModules.default
+                
                 home-manager.nixosModules.home-manager
                 {
                     home-manager.useGlobalPkgs = true;

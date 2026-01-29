@@ -5,6 +5,9 @@
         ./hardware-configuration.nix
     ];
 
+    # Enable flakes
+    nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
     # Boot
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
@@ -43,14 +46,10 @@
     services.dbus.enable = true;
 
     # OpenGL / EGL setup
-    hardware.opengl = {
+    hardware.graphics = {
         enable = true;
-        driSupport = true;
-        driSupport32Bit = true;
+        enable32Bit = true;
     };
-
-    # Enable flakes
-    nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
     system.autoUpgrade.enable = true;
     system.autoUpgrade.dates = "weekly";
