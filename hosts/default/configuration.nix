@@ -74,6 +74,7 @@
             "video"
             "input"
             "seat"
+            "render"
         ];
         packages = with pkgs; [];
     };
