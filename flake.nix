@@ -2,7 +2,7 @@
     description = "keithaustin hyprland setup for NixOS";
 
     inputs = {
-        nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+        nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
         pkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
         hyprland.url = "github:hyprwm/Hyprland";
