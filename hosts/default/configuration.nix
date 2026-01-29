@@ -5,14 +5,18 @@
         ./hardware-configuration.nix
     ];
 
+    # Boot
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
 
+    # Networking
     networking.hostName = "keith-desktop-nix";
     networking.networkmanager.enable = true;
 
+    # Timezone
     time.timeZone = "America/New_York";
 
+    # Locale
     i18n.defaultLocale = "en_US.UTF-8";
     i18n.extraLocaleSettings = {
         LC_ADDRESS = "en_US.UTF-8";
@@ -26,11 +30,28 @@
         LC_TIME = "en_US.UTF-8";
     };
 
+    # Services
     services.xserver.xkb = {
         layout = "us";
         variant = "";
     };
 
+    services.xserver.videoDrivers = [ "amdgpu" ];
+
+    services.dbus.enable = true;
+
+    # Required services for hyprland
+    services.logind.enable = true;
+    services.polkit.enable = true;
+
+    # OpenGL / EGL setup
+    hardware.opengl = {
+        enable = true;
+        driSupport = true;
+        driSupport32Bit = true;
+    };
+
+    # Enable flakes
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
     system.autoUpgrade.enable = true;
@@ -55,8 +76,25 @@
 
     nixpkgs.config.allowUnfree = true;
 
-    programs.hyprland.enable = true;
-    programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+    # Program setup
+
+    # Hyprland
+    programs.hyprland = {
+        enable = true;
+        xwayland.enable = true;
+        package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+        portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+    };
+
+    # Env
+    environment.systemPackages = with pkgs; [
+        wayland
+        wayland-utils
+        mesa
+        libdrm
+        egl-wayland 
+        kitty
+    ];
 
     system.stateVersion = "25.11";
 }

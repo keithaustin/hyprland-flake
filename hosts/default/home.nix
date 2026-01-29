@@ -72,6 +72,14 @@
   # Allow Home Manager to manage Hyprland
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
+    monitor = ",preferred,auto,1";
+    input = {
+      kb_layout = "us";
+    };
+    bind = [
+      "SUPER, Q, exec, kitty"
+      "$SUPER, C, exit"
+    ];
     "$mod" = "SUPER";
   };
 }
