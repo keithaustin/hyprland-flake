@@ -11,7 +11,7 @@
     # Boot
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
-    boot.extraModulePackages = [pkgs.linux-firmware ];
+    boot.initrd.linuxFirmware = pkgs.linux-firmware;
     boot.kernelModules = [ "amdgpu" ];
 
     # Networking
