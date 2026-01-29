@@ -8,7 +8,7 @@
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
 
-    networking.hostName = "keith-desktop-nix"
+    networking.hostName = "keith-desktop-nix";
     networking.networkmanager.enable = true;
 
     time.timeZone = "America/New_York";
