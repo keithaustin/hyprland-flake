@@ -11,11 +11,9 @@
     # Boot
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
-    boot.initrd.linuxFirmware = pkgs.linux-firmware;
-    boot.kernelModules = [ "amdgpu" ];
 
     # Networking
-    networking.hostName = "keith-desktop-nix";
+    networking.hostName = "keith-vbox-nix";
     networking.networkmanager.enable = true;
 
     # Timezone
@@ -41,35 +39,28 @@
         variant = "";
     };
 
-    services.xserver.videoDrivers = [ "amdgpu" ];
-
-    # Required services for hyprland
-    security.polkit.enable = true;
-    services.dbus.enable = true;
-    services.seatd.enable = true;
+    # KDE-required services
+    services.xserver.enable = true;
+    services.displayManager.sddm.enable = true;
+    services.desktopManager.plasma6.enable = true;
 
     # Personal services
     services.tailscale.enable = true;
-
-    # OpenGL / EGL setup
-    hardware.enableRedistributableFirmware = true;
-    hardware.graphics = {
-        enable = true;
-        enable32Bit = true;
-    };
-
-    system.autoUpgrade.enable = true;
-    system.autoUpgrade.dates = "weekly";
-
-    nix.gc.automatic = true;
-    nix.gc.dates = "daily";
-    nix.gc.options = "--delete-older-than 7d";
-    nix.settings.auto-optimise-store = true;
 
     services.openssh = {
         enable = true;
         settings.PermitRootLogin = "no";
     };
+
+    # Auto upgrade
+    system.autoUpgrade.enable = true;
+    system.autoUpgrade.dates = "weekly";
+
+    # Auto gc
+    nix.gc.automatic = true;
+    nix.gc.dates = "daily";
+    nix.gc.options = "--delete-older-than 7d";
+    nix.settings.auto-optimise-store = true;
 
     users.users.keith = {
         isNormalUser = true;
@@ -77,10 +68,6 @@
         extraGroups = [ 
             "networkmanager" 
             "wheel"
-            "video"
-            "input"
-            "seat"
-            "render"
         ];
         packages = with pkgs; [];
     };
@@ -89,20 +76,9 @@
 
     # Program setup
 
-    # Hyprland
-    programs.hyprland = {
-        enable = true;
-        xwayland.enable = true;
-    };
-
     # Env
     environment.systemPackages = with pkgs; [
-        wayland
-        wayland-utils
-        mesa
-        libdrm
-        egl-wayland 
-        kitty
+        kdePackages.konsole
     ];
 
     system.stateVersion = "25.11";
