@@ -8,9 +8,7 @@
 
     home-manager = {
         extraSpecialArgs = { inherit inputs; };
-        users = {      
-            "keith" = import ./home.nix;
-        };
+        users.keith = import ./home.nix;
     };
 
     programs.hyprland.enable = true;
