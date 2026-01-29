@@ -8,7 +8,7 @@
 
     home-manager = {
         extraSpecialArgs = { inherit inputs; };
-        users.keithaustin = {      
+        users.keith = {      
             imports = [ ./home.nix ];
         };
     };
