@@ -50,7 +50,7 @@
                     home-manager.useUserPackages = true;
                     home-manager.users.keith = import ./hosts/vbox/home.nix;
                 }
-            ]
+            ];
         };
     };
 }
