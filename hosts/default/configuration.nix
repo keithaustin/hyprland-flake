@@ -47,6 +47,7 @@
     services.seatd.enable = true;
 
     # OpenGL / EGL setup
+    hardware.enableRedistributableFirmware = true;
     hardware.graphics = {
         enable = true;
         enable32Bit = true;
