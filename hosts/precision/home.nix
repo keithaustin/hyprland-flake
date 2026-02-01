@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, dms, ... }:
 
 {
   # This value determines the Home Manager release that your configuration is
@@ -30,6 +30,7 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     chromium
+    dms.packages.${pkgs.system}.default
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -88,18 +89,8 @@
       "SUPER, B, exec, chromium"
     ];
     "$mod" = "SUPER";
-  };
-
-  programs.dank-material-shell = {
-    enable = true;
-
-    settings = {
-      theme = "dark";
-      dynamicTheming = true;
-    };
-
-    session = {
-      isLightMode = false;
-    };
+    exec-once = [
+      "dankmaterialshell"
+    ];
   };
 }

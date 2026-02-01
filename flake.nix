@@ -60,12 +60,14 @@
         nixosConfigurations.precision = nixpkgs.lib.nixosSystem {
             inherit system;
 
+            specialArgs = {
+                inherit dms;
+            };
+            
             modules = [
                 ./hosts/precision/configuration.nix
 
                 hyprland.nixosModules.default
-
-                dms.nixosModules.dank-material-shell
 
                 home-manager.nixosModules.home-manager
                 {
