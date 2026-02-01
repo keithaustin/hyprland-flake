@@ -102,8 +102,9 @@
         hyprpaper
         libnotify
         mako
-        swayidle
-        swaylock-effects
+        hypridle
+        hyprlock
+        hyprshot
         wlogout
         wl-clipboard
         wofi
