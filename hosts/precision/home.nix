@@ -58,6 +58,7 @@
 
   xdg.configFile."kitty".source = ../../home/keith/config/kitty;
   xdg.configFile."hypr".source = ../../home/keith/config/hypr;
+  xdg.configGile."wallpapers".source = ../../home/keith/config/wallpapers;
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
