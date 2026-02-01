@@ -82,7 +82,7 @@
     };
     bind = [
       "SUPER, Q, exec, kitty"
-      "$SUPER, C, exit"
+      "SUPER, C, exit"
     ];
     "$mod" = "SUPER";
   };

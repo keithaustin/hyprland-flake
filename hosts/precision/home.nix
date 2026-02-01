@@ -29,6 +29,7 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
+    chromium
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -82,7 +83,7 @@
     };
     bind = [
       "SUPER, Q, exec, kitty"
-      "$SUPER, C, exit"
+      "SUPER, C, exit"
     ];
     "$mod" = "SUPER";
   };
