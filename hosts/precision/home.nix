@@ -83,7 +83,9 @@
     };
     bind = [
       "SUPER, Q, exec, kitty"
-      "SUPER, C, exit"
+      "SUPER, C, killactive"
+      "SUPERSHIFT, C, forcekillactive"
+      "SUPER, B, exec, chromium"
     ];
     "$mod" = "SUPER";
   };
