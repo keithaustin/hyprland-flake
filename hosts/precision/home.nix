@@ -89,4 +89,6 @@
     ];
     "$mod" = "SUPER";
   };
+
+  programs.dank-material-shell.enable = true;
 }

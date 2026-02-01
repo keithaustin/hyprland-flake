@@ -11,13 +11,18 @@
             inputs.hyprland.follows = "hyprland";
         };
 
+        dms = {
+            url = "github:avengemedia/dankmaterialshell/stable";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
+
         home-manager = {
             url = "github:nix-community/home-manager/release-25.11";
             inputs.nixpkgs.follows = "nixpkgs";
         };
     };
 
-    outputs = { self, nixpkgs, home-manager, hyprland, ... }@inputs:
+    outputs = { self, nixpkgs, home-manager, hyprland, dms, ... }@inputs:
     let
         system = "x86_64-linux";
     in
@@ -57,6 +62,10 @@
 
             modules = [
                 ./hosts/precision/configuration.nix
+
+                hyprland.nixosModules.default
+                
+                dms.homeModules.dank-material-shell
 
                 home-manager.nixosModules.home-manager
                 {
