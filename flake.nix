@@ -54,10 +54,6 @@
         };
         nixosConfigurations.precision = nixpkgs.lib.nixosSystem {
             inherit system;
-
-            specialArgs = {
-                inherit dms;
-            };
             
             modules = [
                 ./hosts/precision/configuration.nix
