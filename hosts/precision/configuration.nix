@@ -96,8 +96,18 @@
         wayland-utils
         mesa
         libdrm
-        egl-wayland 
+        egl-wayland
+        libsForQt5.qt5.qtwayland
         kitty
+        hyprpaper
+        libnotify
+        mako
+        swayidle
+        swaylock-effects
+        wlogout
+        wl-clipboard
+        wofi
+        waybar
     ];
 
     system.stateVersion = "25.11";

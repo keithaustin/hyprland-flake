@@ -11,11 +11,6 @@
             inputs.hyprland.follows = "hyprland";
         };
 
-        dms = {
-            url = "github:avengemedia/dankmaterialshell/stable";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
-
         home-manager = {
             url = "github:nix-community/home-manager/release-25.11";
             inputs.nixpkgs.follows = "nixpkgs";
@@ -71,9 +66,6 @@
 
                 home-manager.nixosModules.home-manager
                 {
-                    home-manager.extraSpecialArgs = {
-                        inherit dms;
-                    };
                     home-manager.useGlobalPkgs = true;
                     home-manager.useUserPackages = true;
                     home-manager.users.keith = import ./hosts/precision/home.nix;

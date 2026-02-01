@@ -1,6 +1,9 @@
-{ config, pkgs, dms, ... }:
+{ config, pkgs, ... }:
 
 {
+  imports = [
+    ../../home/keith/config.nix
+  ];
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
@@ -30,7 +33,7 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     chromium
-    dms.packages.${pkgs.system}.default
+    
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -89,8 +92,5 @@
       "SUPER, B, exec, chromium"
     ];
     "$mod" = "SUPER";
-    exec-once = [
-      "dankmaterialshell"
-    ];
   };
 }
