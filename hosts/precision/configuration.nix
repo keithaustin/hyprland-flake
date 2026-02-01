@@ -84,6 +84,9 @@
 
     # Program setup
 
+    # Home Manager
+    programs.home-manager.enable = true;
+
     # Hyprland
     programs.hyprland = {
         enable = true;
