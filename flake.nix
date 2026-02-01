@@ -71,6 +71,9 @@
 
                 home-manager.nixosModules.home-manager
                 {
+                    home-manager.extraSpecialArgs = {
+                        inherit dms;
+                    };
                     home-manager.useGlobalPkgs = true;
                     home-manager.useUserPackages = true;
                     home-manager.users.keith = import ./hosts/precision/home.nix;
