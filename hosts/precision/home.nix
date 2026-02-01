@@ -1,9 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    ../../home/keith/config.nix
-  ];
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
@@ -55,6 +52,11 @@
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
+
+  # Enable xdg and declare config files
+  xdg.enable = true;
+
+  xdg.configFile."kitty".source = ../../home/keith/config/kitty;
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
