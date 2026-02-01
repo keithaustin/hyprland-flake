@@ -1,5 +1,4 @@
-let configDir = ./config;
 in
 {
-    xdg.configFile."kitty".source = ./kitty;
+    xdg.configFile."kitty".source = ./config/kitty;
 }
