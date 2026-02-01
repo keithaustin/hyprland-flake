@@ -39,8 +39,6 @@
         variant = "";
     };
 
-    services.xserver.videoDrivers = [ "amdgpu" ];
-
     # Required services for hyprland
     security.polkit.enable = true;
     services.dbus.enable = true;
@@ -50,7 +48,6 @@
     services.tailscale.enable = true;
 
     # OpenGL / EGL setup
-    hardware.enableRedistributableFirmware = true;
     hardware.graphics = {
         enable = true;
         enable32Bit = true;
