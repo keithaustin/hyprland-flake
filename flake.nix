@@ -64,8 +64,8 @@
                 ./hosts/precision/configuration.nix
 
                 hyprland.nixosModules.default
-                
-                dms.homeModules.dank-material-shell
+
+                #dms.homeModules.dank-material-shell
 
                 home-manager.nixosModules.home-manager
                 {
