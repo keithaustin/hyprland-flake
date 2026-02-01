@@ -65,7 +65,7 @@
 
                 hyprland.nixosModules.default
 
-                dms.homeModules.dank-material-shell
+                dms.nixosModules.dank-material-shell
 
                 home-manager.nixosModules.home-manager
                 {
