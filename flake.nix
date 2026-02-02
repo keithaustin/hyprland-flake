@@ -17,7 +17,7 @@
         };
     };
 
-    outputs = { self, nixpkgs, home-manager, hyprland, ... }@inputs:
+    outputs = { self, nixpkgs, pkgs-unstable, home-manager, hyprland, ... }@inputs:
     let
         system = "x86_64-linux";
     in
