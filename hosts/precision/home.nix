@@ -33,6 +33,11 @@
     fira-code
     nerd-fonts.fira-code
     vesktop
+
+    (pkgs.python3.withPackages (python-pkgs: [
+      python-pkgs.pip
+      python-pkgs.requests
+    ]))
   ];
 
   # Home Manager can also manage your environment variables through
