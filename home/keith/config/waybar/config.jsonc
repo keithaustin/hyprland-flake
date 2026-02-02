@@ -83,7 +83,7 @@
     "battery": {
         "format":"{icon} {capacity}%",
         "format-alt":"{icon} {time}",
-        "format-icons":["","","","",""],
+        "format-icons":["", "", "", "", ""],
         "interval": 2
     }
 }
