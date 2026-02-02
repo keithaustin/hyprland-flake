@@ -30,7 +30,8 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     chromium
-    
+    fira-code
+    nerd-fonts.fira-code
   ];
 
   # Home Manager can also manage your environment variables through
