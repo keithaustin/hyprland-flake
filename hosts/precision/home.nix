@@ -74,7 +74,9 @@
   programs.vscode = {
     enable = true;
     package = pkgs.vscode;
+  }
 
+  programs.vscode.profiles.default = {
     userSettings = {
       "editor.fontFamily" = "FiraCode Nerd Font";
       "editor.fontLigatures" = true;
@@ -101,7 +103,7 @@
 
       # Godot dev
       geequlim.godot-tools
-      
+
     ];
   };
 
