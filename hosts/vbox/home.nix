@@ -30,6 +30,7 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     firefox
+    pkgs-unstable.vesktop
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
