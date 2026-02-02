@@ -1,9 +1,9 @@
 sort=-time
 layer=overlay
-width=300
-height=110
-border-size=2
-border-radius=15
+width=500
+height=200
+border-size=4
+border-radius=25
 icons=0
 max-icon-size=64
 default-timeout=5000
