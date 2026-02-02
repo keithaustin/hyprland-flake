@@ -58,6 +58,7 @@
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
+    NIXOS_OZONE_WL = "1";
   };
 
   # Enable xdg and declare config files
@@ -69,9 +70,38 @@
   xdg.configFile."mako".source = ../../home/keith/config/mako;
   xdg.configFile."wallpapers".source = ../../home/keith/config/wallpapers;
 
-  programs.vesktop.vencord = {
-    themes = [
-      ../../home/keith/config/vesktop/themes/rose-pine.css
+  # VSCode setup
+  programs.vscode = {
+    enable = true;
+    package = pkgs.vscode;
+
+    userSettings = {
+      "editor.fontFamily" = "FiraCode Nerd Font";
+      "editor.fontLigatures" = true;
+      "editor.fontSize" = 16;
+
+      "editor.cursorBlinking" = "smooth";
+      "editor.cursorSmoothCaretAnimation" = "on";
+      "editor.smoothScrolling" = true;
+
+      "window.titleBarStyle" = "custom";
+    };
+
+    extensions = with pkgs.vscode-extensions; [
+      # Theme
+      mvllow.rose-pine
+
+      # Nix
+      bbenoist.nix
+      
+      # Python dev
+      ms-python.python
+      ms-python.vscode-pylance
+      ms-python.debugpy
+
+      # Godot dev
+      geequlim.godot-tools
+      
     ];
   };
 
