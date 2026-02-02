@@ -16,9 +16,8 @@
         "hyprland/language",
         "pulseaudio",
         "pulseaudio#microphone",
-        "battery",
-        "custom/weather",
-        "clock"
+        "clock",
+        "battery"
     ],
 
     "hyprland/window": {
