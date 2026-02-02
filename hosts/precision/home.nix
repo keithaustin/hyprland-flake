@@ -67,6 +67,7 @@
   xdg.configFile."hypr".source = ../../home/keith/config/hypr;
   xdg.configFile."waybar".source = ../../home/keith/config/waybar;
   xdg.configFile."mako".source = ../../home/keith/config/mako;
+  xdg.configFile."vesktop".source = ../../home/keith/config/vesktop;
   xdg.configFile."wallpapers".source = ../../home/keith/config/wallpapers;
 
   # Let Home Manager install and manage itself.
