@@ -42,7 +42,7 @@
         "tooltip" : true,
         "format" : "{}",
         "interval" : 30,
-        "exec" : "~/.config/waybar/scripts/waybar-wttr.py",
+        "exec" : "python3 ~/.config/waybar/scripts/waybar-wttr.py",
         "return-type" : "json"
     },
     "tray": {
@@ -51,8 +51,8 @@
     },
     "clock": {
         "interval": 60,
-        "format": ": {:%R}   {:%d/%m}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+        "format": ": {{:%R}}   {{:%d/%m}}",
+        "tooltip-format": "<big>{{:%Y %B}}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
