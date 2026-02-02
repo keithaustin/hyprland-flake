@@ -51,7 +51,8 @@
     },
     "clock": {
         "interval": 60,
-        "format": "{:%H:%M} ",
+        "format": "{:%I:%M}  ",
+        "format-alt": "{:%A, %B %d, %Y (%R)}  ",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "pulseaudio": {
