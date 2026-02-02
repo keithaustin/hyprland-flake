@@ -66,6 +66,19 @@
         settings.PermitRootLogin = "no";
     };
 
+    # Audio setup
+    security.rtkit.enable = true;
+
+    services.pipewire = {
+        enable = true;
+
+        alsa.enable = true;
+        alsa.enable32Bit = true;
+        pulse.enable = true;
+        jack.enable = true;
+        wireplumber.enable = true;
+    };
+
     users.users.keith = {
         isNormalUser = true;
         description = "Keith Austin";
@@ -109,6 +122,8 @@
         wl-clipboard
         wofi
         waybar
+        pamixer
+        pavucontrol
     ];
 
     system.stateVersion = "25.11";
