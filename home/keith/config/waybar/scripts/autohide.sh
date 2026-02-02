@@ -3,15 +3,9 @@
 # Kill any instance of waybar then relaunch it and kill it again.
 # I assure you no waybars are harmed during this process.
 
-sleep 5
-
-killall waybar
-waybar &
 sleep 0.5
 pkill -SIGUSR1 waybar
-sleep 0.5
 
-hyprctl notify 0 6500 "rgb(255,105,180)" "Top bar hidden. Push your mouse up to show it."
 # Continuously checking the cursor position and toggling the bar accordingly
 while true; do
   Y_POS=$(hyprctl cursorpos | awk -F',' '{print $2}' | tr -d ' ')
