@@ -32,7 +32,7 @@
     chromium
     fira-code
     nerd-fonts.fira-code
-    pkgs-unstable.vesktop
+    vesktop
   ];
 
   # Home Manager can also manage your environment variables through
