@@ -74,7 +74,7 @@
   programs.vscode = {
     enable = true;
     package = pkgs.vscode;
-  }
+  };
 
   programs.vscode.profiles.default = {
     userSettings = {
