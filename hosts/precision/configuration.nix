@@ -123,7 +123,6 @@
         waybar
         pamixer
         pavucontrol
-        xfce.thunar
         inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
     ];
 
