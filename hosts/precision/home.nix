@@ -31,7 +31,6 @@
     # '')
     rose-pine-gtk-theme
     rose-pine-icon-theme
-    starship
     chromium
     fira-code
     nerd-fonts.fira-code
@@ -171,9 +170,11 @@
   # Setup bash
   programs.bash = {
     enable = true;
-    initExtra = ''
-      eval "(starship init bash)"
-    '';
+  };
+
+  programs.starship = {
+    enable = true;
+    enableBashIntegration = true;
   };
 
   # Allow Home Manager to manage Hyprland
