@@ -240,7 +240,7 @@
 
       fill = {
         style = "fg:iris";
-        symbol = " ";
+        symbol = "";
       };
 
       time = {
