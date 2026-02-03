@@ -89,6 +89,7 @@
             "seat"
             "render"
         ];
+        shell = pkgs.zsh;
         packages = with pkgs; [];
     };
 
