@@ -62,7 +62,7 @@
   };
 
   # Non-config files to include
-  home.files = {
+  home.file = {
     "themes/chromium".source = "../../home/keith/themes/chromium";
   };
 
