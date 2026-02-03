@@ -78,13 +78,16 @@
 
   programs.vscode.profiles.default = {
     userSettings = {
-      "editor.fontFamily" = "FiraCode Nerd Font";
+      "editor.fontFamily" = "Fira Code";
       "editor.fontLigatures" = true;
       "editor.fontSize" = 16;
 
       "editor.cursorBlinking" = "smooth";
       "editor.cursorSmoothCaretAnimation" = "on";
       "editor.smoothScrolling" = true;
+
+      "workbench.colorTheme" = "Rosé Pine";
+      "workbench.iconTheme" = "rose-pine-icons";
 
       "window.titleBarStyle" = "custom";
     };
@@ -110,8 +113,15 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  # Enable other programs
-  programs.git.enable = true;
+  # Setup git
+  programs.git = {
+    enable = true;
+    settings = {
+      user.name = "Keith Austin";
+      user.email = "keith@keithaustin.dev";
+    };
+  };
+
   programs.bash.enable = true;
 
   # Allow Home Manager to manage Hyprland
