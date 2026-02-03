@@ -29,6 +29,7 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
+    rose-pine-gtk-theme
     chromium
     fira-code
     nerd-fonts.fira-code
@@ -77,6 +78,14 @@
   xdg.configFile."wlogout".source = ../../home/keith/config/wlogout;
   xdg.configFile."wallpapers".source = ../../home/keith/config/wallpapers;
 
+  # GTK Theme
+  gtk = {
+    enable = true;
+    theme = {
+      name = "rose-pine-gtk-theme";
+      package = pkgs.rose-pine-gtk-theme;
+    };
+  };
   # VSCode setup
   programs.vscode = {
     enable = true;
