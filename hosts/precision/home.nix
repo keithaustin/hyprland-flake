@@ -177,7 +177,7 @@
     ohMyZsh = {
       enable = true;
       theme = "powerlevel10k/powerlevel10k";
-    }
+    };
   };
 
   # Allow Home Manager to manage Hyprland
