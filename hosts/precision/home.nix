@@ -30,6 +30,7 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     rose-pine-gtk-theme
+    rose-pine-icon-theme
     chromium
     fira-code
     nerd-fonts.fira-code
@@ -82,9 +83,15 @@
   # GTK Theme
   gtk = {
     enable = true;
+
     theme = {
       name = "rose-pine";
       package = pkgs.rose-pine-gtk-theme;
+    };
+
+    iconTheme = {
+      name = "rose-pine";
+      package = pkgs.rose-pine-icon-theme;
     };
   };
 
