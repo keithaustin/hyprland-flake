@@ -193,6 +193,7 @@
         foam = "#9ccfd8";
         iris = "#c4a7e7";
         text = "#e0def4";
+        dark = "#191724";
       };
 
       username = {
@@ -204,7 +205,7 @@
       
       directory = {
         format = "[](fg:foam)[ $path ]($style)[](fg:foam) ";
-        style = "bg:foam fg:text";
+        style = "bg:foam fg:dark";
         truncation_length = 3;
         truncation_symbol = ".../";
       };
@@ -218,7 +219,7 @@
 
       git_branch = {
         format = "[](fg:gold)[ $symbol $branch ]($style)[](fg:gold) ";
-        style = "bg:gold fg:text";
+        style = "bg:gold fg:dark";
         symbol = "";
       };
 
@@ -245,7 +246,7 @@
       time = {
         disabled = false;
         format = " [](fg:rose)[ $time 󰴈 ]($style)[](fg:rose)";
-        style = "bg:rose fg:text";
+        style = "bg:rose fg:dark";
         time_format = "%I:%M%P";
         use_12hr = true;
       };
