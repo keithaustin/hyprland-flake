@@ -6,7 +6,7 @@
 SHOW_THRESHOLD=1
 
 # Lower bound to hide the bar
-HIDE_THRESHOLD=40
+HIDE_THRESHOLD=44
 
 # This script assumes waybar is running and showing.
 sleep 0.5
