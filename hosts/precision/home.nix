@@ -78,6 +78,7 @@
 
   programs.vscode.profiles.default = {
     userSettings = {
+      "window.zoomLevel" = 0.6;
       "editor.fontFamily" = "Fira Code";
       "editor.fontLigatures" = true;
       "editor.fontSize" = 16;
