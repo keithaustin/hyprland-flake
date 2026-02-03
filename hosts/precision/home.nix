@@ -234,7 +234,7 @@
         ahead = "[⇡\(${count}\)](bg:overlay fg:foam)";
         diverged = "⇕[\[](bg:overlay fg:iris)[⇡\(${ahead_count}\)](bg:overlay fg:foam)[⇣\(${behind_count}\)](bg:overlay fg:rose)[\]](bg:overlay fg:iris)";
         behind = "[⇣\(${count}\)](bg:overlay fg:rose)";
-      }
+      };
 
       fill = {
         style = "fg:overlay";
