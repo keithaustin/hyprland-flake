@@ -84,6 +84,11 @@
   gtk = {
     enable = true;
 
+    font = {
+      name = "Fira Code";
+      size = 14;
+    };
+
     theme = {
       name = "rose-pine";
       package = pkgs.rose-pine-gtk-theme;
