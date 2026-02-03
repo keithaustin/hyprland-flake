@@ -9,12 +9,11 @@
 
 window {
   background: @base;
-  opacity: 0.9;
-  border-radius: 10;
+  opacity: 1.0;
 }
 
 button {
-  border-radius: 0;
+  border-radius: 10px;
   border-color: @overlay;
   text-decoration-color: #ffffff;
   color: @text;
@@ -24,9 +23,9 @@ button {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20%;
+  margin: 2px;
 }
 
-button:focus,
 button:active,
 button:hover {
   background-color: @love;
