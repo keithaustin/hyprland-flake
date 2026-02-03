@@ -196,15 +196,15 @@
       };
 
       username = {
-        format = "[](fg:overlay)[ 󰧱 $user ]($style)[](fg:overlay) ";
+        format = "[](fg:pine)[ 󰧱 $user ]($style)[](fg:pine) ";
         show_always = true;
         style_root = "bg:pine fg:text";
         style_user = "bg:pine fg:text";
       };
       
       directory = {
-        format = "[](fg:overlay)[ $path ]($style)[](fg:overlay) ";
-        style = "bg:overlay fg:pine";
+        format = "[](fg:foam)[ $path ]($style)[](fg:foam) ";
+        style = "bg:foam fg:text";
         truncation_length = 3;
         truncation_symbol = ".../";
       };
@@ -217,8 +217,8 @@
       };
 
       git_branch = {
-        format = "[](fg:overlay)[ $symbol $branch ]($style)[](fg:overlay) ";
-        style = "bg:overlay fg:foam";
+        format = "[](fg:gold)[ $symbol $branch ]($style)[](fg:gold) ";
+        style = "bg:gold fg:text";
         symbol = "";
       };
 
@@ -238,14 +238,14 @@
       };
 
       fill = {
-        style = "fg:overlay";
+        style = "fg:iris";
         symbol = " ";
       };
 
       time = {
         disabled = false;
-        format = " [](fg:overlay)[ $time 󰴈 ]($style)[](fg:overlay)";
-        style = "bg:overlay fg:rose";
+        format = " [](fg:rose)[ $time 󰴈 ]($style)[](fg:rose)";
+        style = "bg:rose fg:text";
         time_format = "%I:%M%P";
         use_12hr = true;
       };
