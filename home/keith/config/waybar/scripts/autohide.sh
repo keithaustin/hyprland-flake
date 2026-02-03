@@ -1,28 +1,30 @@
 #!/bin/bash
 
-# Kill any instance of waybar then relaunch it and kill it again.
-# I assure you no waybars are harmed during this process.
+# NOTE: Your waybar config must have "on-sigusr1": "toggle" for this script to work
 
+# Threshold to show the bar
+SHOW_THRESHOLD=1
+
+# Lower bound to hide the bar
+HIDE_THRESHOLD=40
+
+# This script assumes waybar is running and showing.
 sleep 0.5
 pkill -SIGUSR1 waybar
 
-# Continuously checking the cursor position and toggling the bar accordingly
 while true; do
   Y_POS=$(hyprctl cursorpos | awk -F',' '{print $2}' | tr -d ' ')
 
-  # Check if mouse is at the top edge
-  if [ "$Y_POS" -eq 0 ]; then
+  if [ "$Y_POS" -le "$SHOW_THRESHOLD" ]; then
 
     pkill -SIGUSR1 waybar
 
-    # This inner loop runs *only* while the mouse is on the bar.
-    # It traps the script, keeping the bar open.
-    while [ "$Y_POS" -le 30 ]; do
+    # Sleep until cursor moves below threshold
+    while [ "$Y_POS" -le "$HIDE_THRESHOLD" ]; do
       sleep 0.2
       Y_POS=$(hyprctl cursorpos | awk -F',' '{print $2}' | tr -d ' ')
     done
 
-    # Hide the bar when cursor leaves the bar (set to size 30).
     pkill -SIGUSR1 waybar
 
   fi
