@@ -1,0 +1,63 @@
+@import "./rose-pine.css";
+* {
+  font-family: FiraCode Nerd Font;
+  font-size: 15px;
+  font-weight: bold;
+  background-image: none;
+  box-shadow: none;
+}
+
+window {
+  background: @base;
+  opacity: 0.9;
+}
+
+button {
+  border-radius: 0;
+  border-color: @overlay;
+  text-decoration-color: #ffffff;
+  color: @text;
+  background-color: @base;
+  border-style: solid;
+  border-width: 3px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20%;
+}
+
+button:focus,
+button:active,
+button:hover {
+  background-color: @love;
+  outline-style: none;
+}
+
+#lock {
+  background-image: image(url("/home/rjuji/.config/wlogout/assets/lock.png"));
+}
+
+#logout {
+  background-image: image(url("/home/rjuji/.config/wlogout/assets/logout.png"));
+}
+
+#suspend {
+  background-image: image(
+    url("/home/rjuji/.config/wlogout/assets/suspend.png")
+  );
+}
+
+#hibernate {
+  background-image: image(
+    url("/home/rjuji/.config/wlogout/assets/hibernate.png")
+  );
+}
+
+#shutdown {
+  background-image: image(
+    url("/home/rjuji/.config/wlogout/assets/shutdown.png")
+  );
+}
+
+#reboot {
+  background-image: image(url("/home/rjuji/.config/wlogout/assets/reboot.png"));
+}
