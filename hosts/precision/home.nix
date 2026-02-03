@@ -169,6 +169,12 @@
 
   programs.bash.enable = true;
 
+  programs.zsh = {
+    enable = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+  };
+
   # Allow Home Manager to manage Hyprland
   wayland.windowManager.hyprland.enable = true;
 }
