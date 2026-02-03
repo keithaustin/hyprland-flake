@@ -102,6 +102,9 @@
         xwayland.enable = true;
     };
 
+    # Dconf
+    programs.dconf.enable = true;
+
     # Env
     environment.systemPackages = with pkgs; [
         wayland
