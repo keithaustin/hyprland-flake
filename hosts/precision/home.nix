@@ -31,6 +31,7 @@
     # '')
     rose-pine-gtk-theme
     rose-pine-icon-theme
+    starship
     chromium
     fira-code
     nerd-fonts.fira-code
@@ -166,8 +167,14 @@
       user.email = "keith@keithaustin.dev";
     };
   };
-
-  programs.bash.enable = true;
+  
+  # Setup bash
+  programs.bash = {
+    enable = true;
+    initExtra = ''
+      eval "(starship init bash)"
+    '';
+  };
 
   # Allow Home Manager to manage Hyprland
   wayland.windowManager.hyprland.enable = true;

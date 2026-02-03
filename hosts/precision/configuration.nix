@@ -78,18 +78,6 @@
         wireplumber.enable = true;
     };
 
-    # Shell setup
-    programs.zsh = {
-        enable = true;
-        autosuggestions.enable = true;
-        syntaxHighlighting.enable = true;
-
-        ohMyZsh = {
-            enable = true;
-            theme = "powerlevel10k/powerlevel10k";
-        };
-    };
-
     users.users.keith = {
         isNormalUser = true;
         description = "Keith Austin";
@@ -101,7 +89,6 @@
             "seat"
             "render"
         ];
-        shell = pkgs.zsh;
         packages = with pkgs; [];
     };
 
