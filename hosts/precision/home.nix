@@ -197,14 +197,14 @@
       };
 
       username = {
-        format = "[](fg:pine)[ 󰧱 $user ]($style)[](fg:pine) ";
+        format = "[](fg:pine)[ 󰧱 $user ]($style)";
         show_always = true;
         style_root = "bg:pine fg:text";
         style_user = "bg:pine fg:text";
       };
       
       directory = {
-        format = "[](fg:foam)[ $path ]($style)[](fg:foam) ";
+        format = "[](bg: pine fg:foam)[ $path ]($style)[](fg:foam) ";
         style = "bg:foam fg:dark";
         truncation_length = 3;
         truncation_symbol = ".../";
@@ -240,7 +240,7 @@
 
       fill = {
         style = "fg:iris";
-        symbol = "";
+        symbol = " ";
       };
 
       time = {
