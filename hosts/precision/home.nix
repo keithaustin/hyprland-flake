@@ -179,8 +179,8 @@
     settings = {
       #format = ''$username$hostname$directory$git_branch$git_status$fill$c$julia$nodejs$nim$rust$scala$conda$python$time
       #  [󱞪](fg:iris)'';
-      format = ''$username$directory
-        [󱞪](fg:iris)'';
+      format = ''$username$directory$fill
+      [󱞪](fg:iris)'';
 
       palette = "rose-pine";
 
@@ -200,6 +200,18 @@
         truncation_length = 3;
         truncation_symbol = ".../";
       };
+
+      directory.substitutions = {
+        Documents = "󰈙";
+        Downloads = " ";
+        Music = " ";
+        SPictures = " ";
+      };
+
+      fill = {
+        style = "fg:overlay";
+        symbol = " ";
+      }
     };
   };
 
