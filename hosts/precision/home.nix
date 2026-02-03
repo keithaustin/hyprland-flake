@@ -83,7 +83,7 @@
   gtk = {
     enable = true;
     theme = {
-      name = "rose-pine-gtk-theme";
+      name = "rose-pine";
       package = pkgs.rose-pine-gtk-theme;
     };
   };
