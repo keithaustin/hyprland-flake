@@ -179,7 +179,7 @@
     settings = {
       #format = ''$username$directory$git_branch$git_status$fill$c$julia$nodejs$nim$rust$scala$conda$python$time
       #  [󱞪](fg:iris)'';
-      format = ''$username$directory$git_branch$git_status$fill
+      format = ''$username$directory$git_branch$git_status$fill$time
       [󱞪](fg:iris)'';
 
       palette = "rose-pine";
@@ -239,6 +239,13 @@
       fill = {
         style = "fg:overlay";
         symbol = " ";
+      };
+
+      time = {
+        format = " [](fg:overlay)[ $time 󰴈 ]($style)[](fg:overlay)";
+        style = "bg:overlay fg:rose";
+        time_format = "%I:%M%P";
+        use_12hr = true;
       };
     };
   };
