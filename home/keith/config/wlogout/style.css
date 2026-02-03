@@ -10,6 +10,7 @@
 window {
   background: @base;
   opacity: 0.9;
+  border-radius: 10;
 }
 
 button {
