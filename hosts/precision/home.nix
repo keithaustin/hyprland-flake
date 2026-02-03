@@ -204,7 +204,7 @@
       };
       
       directory = {
-        format = "[](bg: pine fg:foam)[ $path ]($style)[](fg:foam) ";
+        format = "[](bg:pine fg:foam)[ $path ]($style)[](fg:foam) ";
         style = "bg:foam fg:dark";
         truncation_length = 3;
         truncation_symbol = ".../";
