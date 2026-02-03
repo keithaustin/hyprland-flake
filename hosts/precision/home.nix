@@ -177,7 +177,7 @@
     enableBashIntegration = true;
 
     settings = {
-      #format = ''$username$hostname$directory$git_branch$git_status$fill$c$julia$nodejs$nim$rust$scala$conda$python$time
+      #format = ''$username$directory$git_branch$git_status$fill$c$julia$nodejs$nim$rust$scala$conda$python$time
       #  [󱞪](fg:iris)'';
       format = ''$username$directory$fill
       [󱞪](fg:iris)'';
@@ -214,6 +214,27 @@
         Music = " ";
         SPictures = " ";
       };
+
+      git_branch = {
+        format = "[](fg:overlay)[ $symbol $branch ]($style)[](fg:overlay) ";
+        style = "bg:overlay fg:foam";
+        symbol = "";
+      };
+
+      git_status = {
+        style = "bg:overlay fg:love";
+        format = "[](fg:overlay)([$all_status$ahead_behind]($style))[](fg:overlay) ";
+        up_to_date = "[ ✓ ](bg:overlay fg:iris)";
+        untracked = "[?\($count\)](bg:overlay fg:gold)";
+        stashed = "[\$](bg:overlay fg:iris)";
+        modified = "[!\($count\)](bg:overlay fg:gold)";
+        renamed = "[»\($count\)](bg:overlay fg:iris)";
+        deleted = "[✘\($count\)](style)";
+        staged = "[++\($count\)](bg:overlay fg:gold)";
+        ahead = "[⇡\(${count}\)](bg:overlay fg:foam)";
+        diverged = "⇕[\[](bg:overlay fg:iris)[⇡\(${ahead_count}\)](bg:overlay fg:foam)[⇣\(${behind_count}\)](bg:overlay fg:rose)[\]](bg:overlay fg:iris)";
+        behind = "[⇣\(${count}\)](bg:overlay fg:rose)";
+      }
 
       fill = {
         style = "fg:overlay";
