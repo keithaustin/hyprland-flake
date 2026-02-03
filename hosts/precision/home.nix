@@ -219,21 +219,21 @@
 
       time = {
         disabled = false;
-        format = "[](bg:foam fg:rose)[ $time 󰴈 ]($style)[](fg:rose)";
+        format = "[](bg:foam fg:rose)[ $time 󰴈 ]($style)[](fg:rose) ";
         style = "bg:rose fg:dark";
         time_format = "%I:%M%P";
         use_12hr = true;
       };
 
       git_branch = {
-        format = "[](fg:gold)[ $symbol $branch ]($style)[](fg:gold) ";
+        format = "[](fg:gold)[ $symbol $branch ]($style)";
         style = "bg:gold fg:dark";
         symbol = "";
       };
 
       git_status = {
         style = "bg:overlay fg:love";
-        format = "[](fg:overlay)([$all_status$ahead_behind]($style))[](fg:overlay) ";
+        format = "[](bg:gold fg:overlay)([$all_status$ahead_behind]($style))[](fg:overlay) ";
         up_to_date = "[ ✓ ](bg:overlay fg:iris)";
         untracked = "[?\($count\)](bg:overlay fg:gold)";
         stashed = "[\$](bg:overlay fg:iris)";
