@@ -211,7 +211,7 @@
       fill = {
         style = "fg:overlay";
         symbol = " ";
-      }
+      };
     };
   };
 
