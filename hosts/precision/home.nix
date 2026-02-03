@@ -34,6 +34,7 @@
     fira-code
     nerd-fonts.fira-code
     vesktop
+    nemo-with-extensions
 
     (pkgs.python3.withPackages (python-pkgs: [
       python-pkgs.pip
