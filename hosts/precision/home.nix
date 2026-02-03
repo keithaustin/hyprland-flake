@@ -61,6 +61,11 @@
     NIXOS_OZONE_WL = "1";
   };
 
+  # Non-config files to include
+  home.files = {
+    "themes/chromium".source = "../../home/keith/themes/chromium";
+  };
+
   # Enable xdg and declare config files
   xdg.enable = true;
 
