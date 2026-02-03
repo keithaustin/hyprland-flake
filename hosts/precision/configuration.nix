@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, inputs, ... }:
 
 {
     imports = [
@@ -123,6 +123,7 @@
         waybar
         pamixer
         pavucontrol
+        inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
     ];
 
     system.stateVersion = "25.11";
