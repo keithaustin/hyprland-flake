@@ -197,7 +197,7 @@
       };
 
       username = {
-        format = "[](fg:pine)[ 󰧱 $user ]($style)";
+        format = "[](fg:pine)[  $user ]($style)";
         show_always = true;
         style_root = "bg:pine fg:text";
         style_user = "bg:pine fg:text";
