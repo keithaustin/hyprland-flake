@@ -33,31 +33,31 @@ button:hover {
 }
 
 #lock {
-  background-image: image(url("/home/rjuji/.config/wlogout/assets/lock.png"));
+  background-image: image(url("/home/keith/.config/wlogout/assets/lock.png"));
 }
 
 #logout {
-  background-image: image(url("/home/rjuji/.config/wlogout/assets/logout.png"));
+  background-image: image(url("/home/keith/.config/wlogout/assets/logout.png"));
 }
 
 #suspend {
   background-image: image(
-    url("/home/rjuji/.config/wlogout/assets/suspend.png")
+    url("/home/keith/.config/wlogout/assets/suspend.png")
   );
 }
 
 #hibernate {
   background-image: image(
-    url("/home/rjuji/.config/wlogout/assets/hibernate.png")
+    url("/home/keith/.config/wlogout/assets/hibernate.png")
   );
 }
 
 #shutdown {
   background-image: image(
-    url("/home/rjuji/.config/wlogout/assets/shutdown.png")
+    url("/home/keith/.config/wlogout/assets/shutdown.png")
   );
 }
 
 #reboot {
-  background-image: image(url("/home/rjuji/.config/wlogout/assets/reboot.png"));
+  background-image: image(url("/home/keith/.config/wlogout/assets/reboot.png"));
 }
