@@ -192,13 +192,14 @@
         pine = "#31748f";
         foam = "#9ccfd8";
         iris = "#c4a7e7";
+        text = "#e0def4";
       };
 
       username = {
         format = "[](fg:overlay)[ 󰧱 $user ]($style)[](fg:overlay) ";
         show_always = true;
-        style_root = "bg:overlay fg:iris";
-        style_user = "bg:overlay fg:iris";
+        style_root = "bg:pine fg:text";
+        style_user = "bg:pine fg:text";
       };
       
       directory = {
