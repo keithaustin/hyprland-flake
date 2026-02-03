@@ -179,7 +179,7 @@
     settings = {
       #format = ''$username$directory$git_branch$git_status$fill$c$julia$nodejs$nim$rust$scala$conda$python$time
       #  [󱞪](fg:iris)'';
-      format = ''$username$directory$git_branch$git_status$fill$time
+      format = ''$username$directory$time$git_branch$git_status
       [󱞪](fg:iris)'';
 
       palette = "rose-pine";
@@ -204,7 +204,7 @@
       };
       
       directory = {
-        format = "[](bg:pine fg:foam)[ $path ]($style)[](fg:foam) ";
+        format = "[](bg:pine fg:foam)[ $path ]($style)";
         style = "bg:foam fg:dark";
         truncation_length = 3;
         truncation_symbol = ".../";
@@ -215,6 +215,14 @@
         Downloads = " ";
         Music = " ";
         SPictures = " ";
+      };
+
+      time = {
+        disabled = false;
+        format = " [](bg:foam fg:rose)[ $time 󰴈 ]($style)[](fg:rose)";
+        style = "bg:rose fg:dark";
+        time_format = "%I:%M%P";
+        use_12hr = true;
       };
 
       git_branch = {
@@ -243,13 +251,7 @@
         symbol = " ";
       };
 
-      time = {
-        disabled = false;
-        format = " [](fg:rose)[ $time 󰴈 ]($style)[](fg:rose)";
-        style = "bg:rose fg:dark";
-        time_format = "%I:%M%P";
-        use_12hr = true;
-      };
+      
     };
   };
 
