@@ -179,7 +179,7 @@
     settings = {
       #format = ''$username$directory$git_branch$git_status$fill$c$julia$nodejs$nim$rust$scala$conda$python$time
       #  [󱞪](fg:iris)'';
-      format = ''$username$directory$fill
+      format = ''$username$directory$git_branch$git_status$fill
       [󱞪](fg:iris)'';
 
       palette = "rose-pine";
