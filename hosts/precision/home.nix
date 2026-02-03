@@ -177,7 +177,29 @@
     enableBashIntegration = true;
 
     settings = {
-      format = "[](0x9A348E)$username$hostname$localip$shlvl$singularity$kubernetes[](fg:0x9A348E bg:0xDA627D)$directory$vcsh[](fg:0xDA627D bg:0xFCA17D)$git_branch$git_commit$git_state$git_metrics$git_status$hg_branch[](fg:0x86BBD8 bg:0x06969A)$docker_context$package$buf[](fg:0xFCA17D bg:0x86BBD8)$c$cmake$cobol$container$daml$dart$deno$dotnet$elixir$elm$erlang$golang$haskell$helm$java$julia$kotlin$lua$nim$nodejs$ocaml$perl$php$pulumi$purescript$python$rlang$red$ruby$rust$scala$swift$terraform$vlang$vagrant$zig$nix_shell$conda$spack$memory_usage$aws$gcloud$openstack$azure$env_var$crystal$custom$sudo$cmd_duration$line_break$jobs$battery[](fg:0x06969A bg:0x33658A)$time$status$shell$character";
+      #format = ''$username$hostname$directory$git_branch$git_status$fill$c$julia$nodejs$nim$rust$scala$conda$python$time
+      #  [󱞪](fg:iris)'';
+      format = ''$username$directory
+        [󱞪](fg:iris)'';
+
+      palette = "rose-pine";
+
+      palettes.rose-pine = {
+        overlay = "#26233a";
+        love = "#eb6f92";
+        gold = "#f6c177";
+        rose = "#ebbcba";
+        pine = "#31748f";
+        foam = "#9ccfd8";
+        iris = "#c4a7e7";
+      };
+      
+      directory = {
+        format = "[](fg:overlay)[ $path ]($style)[](fg:overlay) ";
+        style = "bg:overlay fg:pine";
+        truncation_length = 3;
+        truncation_symbol = ".../";
+      };
     };
   };
 
