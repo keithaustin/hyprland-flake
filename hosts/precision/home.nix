@@ -97,6 +97,8 @@
       "workbench.colorTheme" = "Rosé Pine";
       "workbench.iconTheme" = "rose-pine-icons";
 
+      "css.validate" = false;
+
       "window.titleBarStyle" = "custom";
     };
 
