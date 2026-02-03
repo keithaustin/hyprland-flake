@@ -63,7 +63,7 @@
 
   # Non-config files to include
   home.file = {
-    "themes/chromium".source = "../../home/keith/themes/chromium";
+    "themes/chromium".source = ../../home/keith/themes/chromium;
   };
 
   # Enable xdg and declare config files
