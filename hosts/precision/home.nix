@@ -193,6 +193,13 @@
         foam = "#9ccfd8";
         iris = "#c4a7e7";
       };
+
+      username = {
+        format = "[](fg:overlay)[ 󰧱 $user ]($style)[](fg:overlay) ";
+        show_always = true;
+        style_root = "bg:overlay fg:iris";
+        style_user = "bg:overlay fg:iris";
+      };
       
       directory = {
         format = "[](fg:overlay)[ $path ]($style)[](fg:overlay) ";
