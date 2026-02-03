@@ -219,7 +219,7 @@
 
       time = {
         disabled = false;
-        format = " [](bg:foam fg:rose)[ $time 󰴈 ]($style)[](fg:rose)";
+        format = "[](bg:foam fg:rose)[ $time 󰴈 ]($style)[](fg:rose)";
         style = "bg:rose fg:dark";
         time_format = "%I:%M%P";
         use_12hr = true;
