@@ -124,7 +124,7 @@ tooltip {
 #pulseaudio {
   color: #c4a7e7;
   border-radius: 10px 0px 0px 10px;
-  margin-left: 5px;
+  border-left: 0px;
   border-right: 0px;
 }
 
@@ -140,6 +140,7 @@ tooltip {
   color: #f6c177;
   border-radius: 0 10px 10px 0;
   margin-right: 10px;
+  padding-right: 2px;
   border-left: 0px;
 }
 
