@@ -33,6 +33,9 @@
         LC_TIME = "en_US.UTF-8";
     };
 
+    # Hardware
+    hardware.bluetooth.enable = true;
+
     # Services
     services.xserver.xkb = {
         layout = "us";

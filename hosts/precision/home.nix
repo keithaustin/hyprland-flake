@@ -29,18 +29,47 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
+    # GTK Theme
     rose-pine-gtk-theme
     rose-pine-icon-theme
-    chromium
-    fira-code
-    nerd-fonts.fira-code
-    vesktop
+
+    # Desktop setup stuff
     nemo-with-extensions
 
+    # Fonts
+    fira-code
+    nerd-fonts.fira-code
+
+    # Personal/productivity
+    chromium
+    vesktop
+    obsidian
+    libreoffice-qt
+
+    # Coding
     (pkgs.python3.withPackages (python-pkgs: [
       python-pkgs.pip
       python-pkgs.requests
     ]))
+    rustup
+    lua 
+    nodejs_25
+    nodePackages.pnpm
+    gcc 
+    go
+    nim
+    crystal
+
+    # Bluetooth
+    blueberry
+
+    # Gaming
+    steam 
+    steam-run 
+    lutris
+
+    # Utilities
+    viewnior
   ];
 
   # Home Manager can also manage your environment variables through
