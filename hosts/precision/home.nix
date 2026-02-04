@@ -53,7 +53,7 @@
     ]))
     rustup
     lua 
-    nodejs_25
+    nodejs
     nodePackages.pnpm
     gcc 
     go
