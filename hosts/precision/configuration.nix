@@ -140,5 +140,8 @@
         inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
     ];
 
+    # Fix fonts for Steam
+    fonts.fontDir.enable = true;
+
     system.stateVersion = "25.11";
 }
