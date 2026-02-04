@@ -33,6 +33,9 @@
     rose-pine-gtk-theme
     rose-pine-icon-theme
 
+    # XCursor
+    rose-pine-cursor
+
     # Desktop setup stuff
     nemo-with-extensions
 
@@ -102,6 +105,14 @@
   # Non-config files to include
   home.file = {
     "themes/chromium".source = ../../home/keith/themes/chromium;
+  };
+
+  # Set xcursor
+  home.pointerCursor = {
+    name = "BreezeX-RosePine-Linux";
+    size = 32;
+    gtk.enable = true;
+    x11.enable = true;
   };
 
   # Enable xdg and declare config files
