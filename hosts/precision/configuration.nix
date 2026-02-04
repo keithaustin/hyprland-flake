@@ -11,9 +11,19 @@
     # Boot
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
+    boot.initrd = {
+        supportedFilesystems = [ "nfs" ];
+        kernelModules = [ "nfs" ];
+    };
+
+    # Auto-mount NFS shares
+    fileSystems."/mnt/keith" = {
+        device = "192.168.10.112:/mnt/storage-pool";
+        fsType = "nfs";
+    };
 
     # Networking
-    networking.hostName = "keith-desktop-nix";
+    networking.hostName = "keith-precision-nix";
     networking.networkmanager.enable = true;
 
     # Timezone
@@ -118,6 +128,7 @@
 
     # Env
     environment.systemPackages = with pkgs; [
+        nfs-utils
         wayland
         wayland-utils
         mesa
