@@ -82,7 +82,7 @@
         "scroll-step": 5
     },
     "battery": {
-        "format":" {capacity}% {icon}",
+        "format":" {capacity}% {icon} ",
         "format-alt":"{time} {icon}",
         "format-icons":["", "", "", "", ""],
         "interval": 2
