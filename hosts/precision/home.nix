@@ -91,7 +91,6 @@
   home.sessionVariables = {
     # EDITOR = "emacs";
     NIXOS_OZONE_WL = "1";
-    STEAM_FORCE_DESKTOPUI_SCALING = "1.0";
   };
 
   # Non-config files to include
@@ -109,6 +108,18 @@
   xdg.configFile."wofi".source = ../../home/keith/config/wofi;
   xdg.configFile."wlogout".source = ../../home/keith/config/wlogout;
   xdg.configFile."wallpapers".source = ../../home/keith/config/wallpapers;
+
+  xdg.desktopEntries.steam = {
+    name = "Steam";
+    exec = "steam -forcedesktopscaling 1.0 %U";
+    icon = "steam";
+    terminal = false;
+    categories = [ "Network" "FileTransfer" "Game" ];
+    settings = {
+      PrefersNonDefaultGPU = "true";
+      X-KDE-RunOnDiscreteGPU = "true";
+    };
+  };
 
   # GTK Theme
   gtk = {
