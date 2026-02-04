@@ -39,6 +39,14 @@
         variant = "";
     };
 
+    # Autologin on boot, stay in tty on exit hyprland
+    services.getty.autologinUser = "keith";
+    environment.loginShellInit = ''
+        if [ "$(tty)" = "/dev/tty1" ]; then
+            hyprland
+        fi
+    '';
+
     # Required services for hyprland
     security.polkit.enable = true;
     services.dbus.enable = true;
