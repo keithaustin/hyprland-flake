@@ -91,6 +91,7 @@
   home.sessionVariables = {
     # EDITOR = "emacs";
     NIXOS_OZONE_WL = "1";
+    STEAM_FORCE_DESKTOPUI_SCALING = "1.0";
   };
 
   # Non-config files to include
