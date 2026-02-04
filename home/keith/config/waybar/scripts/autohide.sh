@@ -3,10 +3,10 @@
 # NOTE: Your waybar config must have "on-sigusr1": "toggle" for this script to work
 
 # Threshold to show the bar
-SHOW_THRESHOLD=1
+SHOW_THRESHOLD=4
 
 # Lower bound to hide the bar
-HIDE_THRESHOLD=48
+HIDE_THRESHOLD=56
 
 # This script assumes waybar is running and showing.
 sleep 0.5
