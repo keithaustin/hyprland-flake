@@ -56,7 +56,7 @@
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "pulseaudio": {
-        "format": "{icon} {volume}%",
+        "format": "{volume}% {icon}",
         "tooltip": false,
         "format-muted": " Muted",
         "on-click": "pamixer -t",
@@ -75,16 +75,16 @@
     },
     "pulseaudio#microphone": {
         "format": "{format_source}",
-        "format-source": "🎙{volume}%",
-        "format-source-muted": "🎙Muted",
+        "format-source": "{volume}% ",
+        "format-source-muted": "Muted ",
         "on-click": "pamixer --default-source -t",
         "on-scroll-up": "pamixer --default-source -i 5",
         "on-scroll-down": "pamixer --default-source -d 5",
         "scroll-step": 5
     },
     "battery": {
-        "format":"{icon} {capacity}%",
-        "format-alt":"{icon} {time}",
+        "format":" {capacity}% {icon}",
+        "format-alt":"{time} {icon}",
         "format-icons":["", "", "", "", ""],
         "interval": 2
     }
