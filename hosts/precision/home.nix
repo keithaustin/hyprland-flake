@@ -115,16 +115,13 @@
   xdg.configFile."wlogout".source = ../../home/keith/config/wlogout;
   xdg.configFile."wallpapers".source = ../../home/keith/config/wallpapers;
 
-  xdg.desktopEntries.steam = {
+  xdg.desktopEntries."steam" = {
     name = "Steam";
-    exec = "steam -forcedesktopscaling 1.0 %U";
+    genericName = "Game Launcher";
+    exec = "env STEAM_FORCE_DESKTOPSCALING=1.0 steam %U";
     icon = "steam";
     terminal = false;
     categories = [ "Network" "FileTransfer" "Game" ];
-    settings = {
-      PrefersNonDefaultGPU = "true";
-      X-KDE-RunOnDiscreteGPU = "true";
-    };
   };
 
   # GTK Theme
