@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, inputs, ... }:
 
 {
     imports = [
@@ -11,9 +11,19 @@
     # Boot
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
+    boot.initrd = {
+        supportedFilesystems = [ "nfs" ];
+        kernelModules = [ "nfs" ];
+    };
+
+    # Auto-mount NFS shares
+    fileSystems."/mnt/keith" = {
+        device = "192.168.10.112:/mnt/storage-pool";
+        fsType = "nfs";
+    };
 
     # Networking
-    networking.hostName = "keith-desktop-nix";
+    networking.hostName = "keith-precision-nix";
     networking.networkmanager.enable = true;
 
     # Timezone
@@ -33,13 +43,22 @@
         LC_TIME = "en_US.UTF-8";
     };
 
+    # Hardware
+    hardware.bluetooth.enable = true;
+
     # Services
     services.xserver.xkb = {
         layout = "us";
         variant = "";
     };
 
-    services.xserver.videoDrivers = [ "amdgpu" ];
+    # Autologin on boot, stay in tty on exit hyprland
+    services.getty.autologinUser = "keith";
+    environment.loginShellInit = ''
+        if [ "$(tty)" = "/dev/tty1" ]; then
+            hyprland
+        fi
+    '';
 
     # Required services for hyprland
     security.polkit.enable = true;
@@ -50,7 +69,6 @@
     services.tailscale.enable = true;
 
     # OpenGL / EGL setup
-    hardware.enableRedistributableFirmware = true;
     hardware.graphics = {
         enable = true;
         enable32Bit = true;
@@ -67,6 +85,18 @@
     services.openssh = {
         enable = true;
         settings.PermitRootLogin = "no";
+    };
+
+    # Audio setup
+    security.rtkit.enable = true;
+
+    services.pipewire = {
+        enable = true;
+        alsa.enable = true;
+        alsa.support32Bit = true;
+        pulse.enable = true;
+        jack.enable = true;
+        wireplumber.enable = true;
     };
 
     users.users.keith = {
@@ -93,15 +123,36 @@
         xwayland.enable = true;
     };
 
+    # Dconf
+    programs.dconf.enable = true;
+
     # Env
     environment.systemPackages = with pkgs; [
+        nfs-utils
         wayland
         wayland-utils
         mesa
         libdrm
-        egl-wayland 
+        egl-wayland
+        libsForQt5.qt5.qtwayland
         kitty
+        hyprpaper
+        libnotify
+        mako
+        hypridle
+        hyprlock
+        hyprshot
+        wlogout
+        wl-clipboard
+        wofi
+        waybar
+        pamixer
+        pavucontrol
+        inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
     ];
+
+    # Fix fonts for Steam
+    fonts.fontDir.enable = true;
 
     system.stateVersion = "25.11";
 }
