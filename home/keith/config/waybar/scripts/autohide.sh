@@ -25,6 +25,8 @@ while true; do
       Y_POS=$(hyprctl cursorpos | awk -F',' '{print $2}' | tr -d ' ')
     done
 
+    sleep 1.0
+
     pkill -SIGUSR1 waybar
 
   fi
