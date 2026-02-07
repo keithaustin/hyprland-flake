@@ -30,7 +30,7 @@
     {
         nixosConfigurations.default = nixpkgs.lib.nixosSystem {
             inherit system;
-
+	    specialArgs = { inherit inputs; };
             modules = [
                 ./hosts/default/configuration.nix
 
@@ -38,6 +38,9 @@
                 
                 home-manager.nixosModules.home-manager
                 {
+		    home-manager.extraSpecialArgs = {
+			inherit pkgs-unstable;
+		    };
                     home-manager.useGlobalPkgs = true;
                     home-manager.useUserPackages = true;
                     home-manager.users.keith = import ./hosts/default/home.nix;

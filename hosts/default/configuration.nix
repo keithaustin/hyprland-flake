@@ -23,7 +23,7 @@
     };
 
     # Networking
-    networking.hostName = "keith-precision-nix";
+    networking.hostName = "keith-desktop-nix";
     networking.networkmanager.enable = true;
 
     # Timezone
