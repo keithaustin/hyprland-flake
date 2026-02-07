@@ -25,7 +25,7 @@
     # Networking
     networking.hostName = "keith-desktop-nix";
     networking.networkmanager.enable = true;
-
+    networking.extraHosts = "192.168.10.112 truenas.local";
     # Timezone
     time.timeZone = "America/New_York";
 
