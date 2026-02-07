@@ -68,6 +68,17 @@
     # Personal services
     services.tailscale.enable = true;
 
+    # QMK/Vial setup
+    services.udev = {
+        packages = with pkgs; [
+            qmk 
+            qmk-udev-rules 
+            qmk_hid 
+            via 
+            vial
+        ];
+    };
+
     # OpenGL / EGL setup
     hardware.graphics = {
         enable = true;
