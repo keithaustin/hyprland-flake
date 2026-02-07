@@ -49,7 +49,7 @@
     obsidian
     libreoffice-qt
 
-    # Coding
+    # Coding/Dev
     (pkgs.python3.withPackages (python-pkgs: [
       python-pkgs.pip
       python-pkgs.requests
@@ -62,6 +62,9 @@
     go
     nim
     crystal
+    godot
+    blender
+    aseprite
 
     # Bluetooth
     blueberry
