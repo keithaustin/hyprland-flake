@@ -22,14 +22,10 @@
         fsType = "nfs";
     };
 
-    # Enable systemd-resolved
-    services.resolved.enable = true;
-
     # Networking
     networking.hostName = "keith-desktop-nix";
     networking.networkmanager.enable = true;
     networking.extraHosts = "192.168.10.112 truenas.local";
-    networking.networkmanager.dns = "systemd-resolved";
     
     # Timezone
     time.timeZone = "America/New_York";
