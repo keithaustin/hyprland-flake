@@ -8,6 +8,9 @@ SHOW_THRESHOLD=4
 # Lower bound to hide the bar
 HIDE_THRESHOLD=56
 
+# Time delay before hiding the bar
+HIDE_DELAY=0.3
+
 # This script assumes waybar is running and showing.
 sleep 0.5
 pkill -SIGUSR1 waybar
@@ -25,7 +28,7 @@ while true; do
       Y_POS=$(hyprctl cursorpos | awk -F',' '{print $2}' | tr -d ' ')
     done
 
-    sleep 1.0
+    sleep $HIDE_DELAY
 
     pkill -SIGUSR1 waybar
 
