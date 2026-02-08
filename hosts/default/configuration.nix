@@ -18,7 +18,7 @@
 
     # Auto-mount NFS shares
     fileSystems."/mnt/keith" = {
-        device = "192.168.10.112:/mnt/storage-pool";
+        device = "truenas.local:/mnt/storage-pool";
         fsType = "nfs";
     };
 
