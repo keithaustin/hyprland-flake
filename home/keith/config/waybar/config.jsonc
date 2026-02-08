@@ -3,7 +3,7 @@
     "position": "top",
     "mod": "dock",
     "exclusive": false,
-    "passthrough": false,
+    "passthrough": true,
     "gtk-layer-shell": true,
     "on-sigusr1": "toggle",
     "height": 0,
