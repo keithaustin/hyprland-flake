@@ -76,6 +76,7 @@
     viewnior
     flatpak
     kdePackages.ark
+    p7zip
   ];
 
   # Home Manager can also manage your environment variables through
