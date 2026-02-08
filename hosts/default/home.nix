@@ -75,6 +75,7 @@
     # Utilities
     viewnior
     flatpak
+    kdePackages.ark
   ];
 
   # Home Manager can also manage your environment variables through
