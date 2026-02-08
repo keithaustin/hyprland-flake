@@ -70,6 +70,7 @@
     steam 
     steam-run 
     lutris
+    pokemmo-installer
 
     # Utilities
     viewnior
