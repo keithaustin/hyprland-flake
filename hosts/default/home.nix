@@ -62,6 +62,9 @@
     go
     nim
     crystal
+    godot
+    blender
+    aseprite
 
     # Bluetooth
     blueberry
