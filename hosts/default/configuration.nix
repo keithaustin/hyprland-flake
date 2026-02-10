@@ -69,6 +69,7 @@
 
     # Personal services
     services.tailscale.enable = true;
+    services.flatpak.enable = true;
 
     # QMK/Vial setup
     services.udev = {
