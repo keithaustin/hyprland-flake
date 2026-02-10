@@ -46,6 +46,7 @@
     # Personal/productivity
     chromium
     vesktop
+    stremio
     obsidian
     libreoffice-qt
 
