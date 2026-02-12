@@ -74,6 +74,8 @@
     steam 
     steam-run 
     lutris
+    snes9x
+    poptracker
     pokemmo-installer
 
     # Utilities

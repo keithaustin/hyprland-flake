@@ -1,5 +1,21 @@
 { pkgs, lib, inputs, ... }:
+let
+    sni = pkgs.stdenv.mkDerivation {
+            pname = "sni";
+            version = "0.0.102a";
 
+            src = pkgs.fetchurl {
+                url = "https://github.com/alttpo/sni/releases/download/v0.0.102a/sni-v0.0.102a-linux-amd64.tar.xz";
+                sha256 = "sha256-wud/7Aoo4s+oICrZb9oHwSbyS9+0p9nEIIFk/y2Ptds=";
+            };
+
+            installPhase = ''
+                mkdir -p $out/bin
+                cp sni $out/bin
+                chmod +x $out/bin/sni
+            '';
+        };
+in
 {
     imports = [
         ./hardware-configuration.nix
@@ -131,6 +147,18 @@
 
     # Program setup
 
+    # nix-ld for SNI/maybe other stuff later
+    programs.nix-ld = {
+        enable = true;
+
+        libraries = with pkgs; [
+            stdenv.cc.cc
+            zlib 
+            openssl
+            curl
+        ];
+    };
+
     # Hyprland
     programs.hyprland = {
         enable = true;
@@ -163,6 +191,7 @@
         pamixer
         pavucontrol
         inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
+        sni
     ];
 
     # Fix fonts for Steam
