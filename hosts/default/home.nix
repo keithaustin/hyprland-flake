@@ -46,7 +46,6 @@
     # Personal/productivity
     chromium
     vesktop
-    #stremio
     obsidian
     libreoffice-qt
 
@@ -74,7 +73,9 @@
     steam 
     steam-run 
     lutris
-    snes9x
+    snes9x-gtk
+    alttpr-opentracker
+    cemu
     poptracker
     pokemmo-installer
 

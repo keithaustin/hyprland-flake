@@ -129,6 +129,13 @@ in
         wireplumber.enable = true;
     };
 
+    # Virtualization
+    virtualisation.libvirtd.enable = true;
+    virtualisation.libvirtd.qemu.swtpm.enable = true;
+    programs.virt-manager.enable = true;
+
+    networking.firewall.trustedInterfaces = [ "virbr0" ];
+
     users.users.keith = {
         isNormalUser = true;
         description = "Keith Austin";
@@ -139,6 +146,8 @@ in
             "input"
             "seat"
             "render"
+            "libvirtd"
+            "kvm"
         ];
         packages = with pkgs; [];
     };
@@ -168,8 +177,11 @@ in
     # Dconf
     programs.dconf.enable = true;
 
+
     # Env
     environment.systemPackages = with pkgs; [
+        wineWowPackages.stable
+        winetricks
         nfs-utils
         wayland
         wayland-utils
