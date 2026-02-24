@@ -5,7 +5,8 @@
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
-    "on-sigusr1": "toggle",
+    "on-sigusr1": "hide",
+    "on-sigusr2": "show",
     "height": 0,
     "modules-left": [
         "hyprland/workspaces"

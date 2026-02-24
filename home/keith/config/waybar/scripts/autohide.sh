@@ -20,7 +20,7 @@ while true; do
 
   if [ "$Y_POS" -le "$SHOW_THRESHOLD" ]; then
 
-    pkill -SIGUSR1 waybar
+    pkill -SIGUSR2 waybar
 
     # Sleep until cursor moves below threshold
     while [ "$Y_POS" -le "$HIDE_THRESHOLD" ]; do
