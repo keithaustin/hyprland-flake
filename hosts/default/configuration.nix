@@ -195,6 +195,7 @@ in
 
     # Env
     environment.systemPackages = with pkgs; [
+        git-lfs
         wineWowPackages.stable
         winetricks
         nfs-utils

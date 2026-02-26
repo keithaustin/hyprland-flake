@@ -147,6 +147,16 @@
     categories = [ "Network" "FileTransfer" "Game" ];
   };
 
+  xdg.desktopEntries."entrando" = {
+    name = "Entrando";
+    genericName = "Entrance Tracker";
+    exec = "steam-run /home/keith/Applications/Entrando";
+    terminal = false;
+    categories = [
+      "Application" "Game"
+    ];
+  };
+
   # GTK Theme
   gtk = {
     enable = true;
@@ -228,6 +238,7 @@
   # Setup git
   programs.git = {
     enable = true;
+    lfs.enable = true;
     settings = {
       user.name = "Keith Austin";
       user.email = "keith@keithaustin.dev";
